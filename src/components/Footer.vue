@@ -16,5 +16,6 @@ export default {
     font-weight: 400;
     text-align: center;
     font-size: 0.8rem;
+    margin-top: 3rem;
 }
 </style>

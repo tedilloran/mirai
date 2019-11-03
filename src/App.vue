@@ -17,9 +17,9 @@ export default {
   name: "app",
   components: {
     Header,
-    BackgroundVideo,
     Content,
-    Footer
+    Footer,
+    BackgroundVideo
   }
 };
 </script>
