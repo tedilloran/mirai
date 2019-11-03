@@ -7,7 +7,7 @@
                     <h2 class="title--sub">consequat semper viverra nam libero</h2>
                 </div>
                 <div class="inner__content--sub">
-                    <img class='lightbulb' ref='lightbulb' src="@/assets/light_off.svg">
+                    <img class='main-img' ref='mainImage' src="@/assets/vinyl.svg">
                 </div>
             </div>
         </div>
@@ -15,14 +15,15 @@
 </template>
 
 <script>
-import { TimelineMax, Elastic } from 'gsap/TweenMax';
+import { TimelineMax, Power0 } from 'gsap/TweenMax';
 
 export default {
     name: 'Header',
     mounted() {
-        const { lightbulb } = this.$refs;
-        const tl = new TimelineMax({ repeat: -1, yoyo: true });
-        tl.to(lightbulb, 1, {rotationZ: 180 });
+        const { mainImage } = this.$refs;
+        const tl = new TimelineMax({ repeat: -1});
+        tl.to(mainImage, 2, { ease: Power0.easeNone, rotationZ: 360 })
+            .smoothChildTiming(true);
     }
 };
 </script>
@@ -51,8 +52,7 @@ export default {
             grid-column-gap: 1rem;
             width: 100%;
             height: 100%;
-            border: 0.1rem solid $color-primary;
-            border-radius: 0.3rem;
+            border: 1px solid $color-primary;
 
             &--main {
                 padding: 3rem;
@@ -76,9 +76,11 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                overflow: hidden;
 
-                .lightbulb {
-                    transform: rotate(180deg);
+                .main-img {
+                    height: 100%;
+                    width: 100%;
                     position: relative;
                 }
             }
