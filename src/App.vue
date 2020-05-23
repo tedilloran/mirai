@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <BackgroundVideo></BackgroundVideo>
-    <Content></Content>
-    <Footer></Footer>
+    <Header/>
+    <Nav/>
+    <Content>
+      Testasdasdasd
+    </Content>
+    <Footer/>
   </div>
 </template>
 
@@ -11,14 +13,14 @@
 import Header from "./components/Header.vue";
 import BackgroundVideo from "./components/BackgroundVideo.vue";
 import Content from "./components/Content.vue";
-import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 export default {
   name: "app",
   components: {
     Header,
+    Nav,
     Content,
-    Footer,
     BackgroundVideo
   }
 };
@@ -29,6 +31,7 @@ export default {
   z-index: 0;
   width: 100%;
   box-sizing: border-box;
-  padding: 3rem;
+  margin-left: 4rem;
+  margin-top: 4rem;
 }
 </style>
