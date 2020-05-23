@@ -9,17 +9,15 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
 .footer {
-    color: $color-white;
-    font-weight: 400;
-    text-align: center;
-    font-size: 0.8rem;
-    margin-top: 3rem;
+  color: $color-white;
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 3rem;
 }
 </style>
